@@ -59,6 +59,14 @@ const middleImg = document.querySelector('middle-img');
     const contactData = siteContent.contact;
     const footerData = siteContent.footer;
 
+    //Nav
+    navItems.forEach((nav, ndx) => {
+      nav.innerText = navData["nav-item-" + (ndx + 1)]
+    });
+    
+    //logo image
+    logoImg.setAttribute("src", navData["img-src"]);
+
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
     
