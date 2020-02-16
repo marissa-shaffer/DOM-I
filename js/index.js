@@ -53,7 +53,11 @@ const content = document.querySelectorAll("p");
 const middleImg = document.querySelector('middle-img');
 
 // Task 2: Update the HTML with the JSON data
-    
+    const navData = siteContent.nav;
+    const ctaData = siteContent.cta;
+    const mainData = siteContent["main-content"];
+    const contactData = siteContent.contact;
+    const footerData = siteContent.footer;
 
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
