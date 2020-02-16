@@ -67,6 +67,13 @@ const middleImg = document.querySelector('middle-img');
     //logo image
     logoImg.setAttribute("src", navData["img-src"]);
 
+    //Text for h1 and button, and src for image in cta class
+    let splitWord = ctaData.h1.split(' ');
+    let awesomeCopy = `<p>${splitWord[0]}</p><p>${splitWord[1]}</p>`;
+    ctaH1.innerHTML = awesomeCopy;
+    ctaButton.innerText = ctaData.button;
+    ctaImage.setAttribute("src", ctaData['img-src']);
+
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
     
