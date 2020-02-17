@@ -97,13 +97,17 @@ const middleImg = document.querySelector('middle-img');
     let midImg = document.getElementById('middle-img');
     midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-    //bottom content
-    subHeadings[2].innerText = mainData["services-h4"]
-    content[2].innerText = mainData["services-content"]
-    subheadings[3].innerText = mainData["product-h4"]
-    content[3].innerText = mainData['product-content']
-    subheadings[4].innerText = mainData['vision-h4']
-    content[4].innerText = mainData['vision-content']
+    //Text content - P
+    let theParagraph = [];
+    theParagraph.push(siteContent['main-content']['features-content']);
+    theParagraph.push(siteContent['main-content']['about-content']);
+    theParagraph.push(siteContent['main-content']['services-content']);
+    theParagraph.push(siteContent['main-content']['product-content']);
+    theParagraph.push(siteContent['main-content']['vision-content']);
+  
+    let mainContentP = document.querySelectorAll('.main-content .text-content p');
+  
+    theParagraph.forEach((e, i) => mainContentP[i].textContent = e);
 
     //contact info
     subheadings[5].innerText = contactData['contact-h4']
