@@ -60,9 +60,13 @@ const middleImg = document.querySelector('middle-img');
     const footerData = siteContent.footer;
 
     //Nav
-    navItems.forEach((nav, ndx) => {
-      nav.innerText = navData["nav-item-" + (ndx + 1)]
-    });
+    let myNav = document.querySelectorAll('a');
+    myNav[0].textContent = siteContent['nav']['nav-item-1'];
+    myNav[1].textContent = siteContent['nav']['nav-item-2'];;
+    myNav[2].textContent = siteContent['nav']['nav-item-3'];;
+    myNav[3].textContent = siteContent['nav']['nav-item-4'];;
+    myNav[4].textContent = siteContent['nav']['nav-item-5'];
+    myNav[5].textContent = siteContent['nav']['nav-item-6'];;
     
     //logo image
     logoImg.setAttribute("src", navData["img-src"]);
