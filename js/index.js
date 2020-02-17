@@ -74,6 +74,15 @@ const middleImg = document.querySelector('middle-img');
     ctaButton.innerText = ctaData.button;
     ctaImage.setAttribute("src", ctaData['img-src']);
 
+    //Main content
+    subheadings[0].innerText = mainData[`features-h4`]
+    content[0].innterText = mainData[`features-content`]
+    subheadings[1].innerText = mainData[`about-h4`]
+    content[1].innerText = mainData[`about-content`]
+
+    //Middle Image
+    middleImg.setAttribute("src", ctaData["img-src"])
+
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
     
