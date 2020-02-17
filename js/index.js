@@ -82,10 +82,16 @@ const middleImg = document.querySelector('middle-img');
     logoPic.setAttribute('src', siteContent["cta"]["img-src"]);
 
     //Main content
-    subheadings[0].innerText = mainData[`features-h4`]
-    content[0].innterText = mainData[`features-content`]
-    subheadings[1].innerText = mainData[`about-h4`]
-    content[1].innerText = mainData[`about-content`]
+    let sectionTitles = [];
+    sectionTitles.push(siteContent['main-content']['features-h4']);
+    sectionTitles.push(siteContent['main-content']['about-h4']);
+    sectionTitles.push(siteContent['main-content']['services-h4']);
+    sectionTitles.push(siteContent['main-content']['product-h4']);
+    sectionTitles.push(siteContent['main-content']['vision-h4']);
+
+    let mainContentH4s = document.querySelectorAll('.main-content .text-content h4');
+
+    sectionTitles.forEach((e, i) => mainContentH4s[i].textContent = e);
 
     //Middle Image
     middleImg.setAttribute("src", ctaData["img-src"])
