@@ -94,7 +94,8 @@ const middleImg = document.querySelector('middle-img');
     sectionTitles.forEach((e, i) => mainContentH4s[i].textContent = e);
 
     //Middle Image
-    middleImg.setAttribute("src", ctaData["img-src"])
+    let midImg = document.getElementById('middle-img');
+    midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
     //bottom content
     subHeadings[2].innerText = mainData["services-h4"]
