@@ -102,8 +102,6 @@ const middleImg = document.querySelector('middle-img');
 
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
-    
+    navItems.forEach(nav => nav.style.color = 'green')
     //  Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
-    
-    //  Check your work by looking at the original html in the browser
 
