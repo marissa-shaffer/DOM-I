@@ -104,4 +104,12 @@ const middleImg = document.querySelector('middle-img');
     //  Change the color of the navigation text to be green.
     navItems.forEach(nav => nav.style.color = 'green')
     //  Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
+    aPrint.setAttribute('href', '#')
+    aPrint.inerText = 'Print'
+    aPrint.style.color = 'green'
+    aEmployment.setAttribute('href', '#')
+    aEmployment.innerText = 'Employment'
+    aEmployment.style.color = 'green'
 
+    nav.prepend(aPrint)
+    nav.appendChild(aEmployment)
