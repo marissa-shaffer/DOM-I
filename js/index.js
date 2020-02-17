@@ -40,3 +40,94 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Task 1: Create selectors to point your data into elements
+const menu = document.querySelector("nav");
+const navItems = document.querySelector("a");
+const logoImg = document.querySelector("#logo-img");
+const ctaH1 = document.querySelector("h1");
+const ctaButton = document.querySelector("button");
+const ctaImage = document.querySelector("#cta-img");
+const subheadings = document.querySelectorAll("h4");
+const content = document.querySelectorAll("p");
+const middleImg = document.querySelector('middle-img');
+
+// Task 2: Update the HTML with the JSON data
+    const navData = siteContent.nav;
+    const ctaData = siteContent.cta;
+    const mainData = siteContent["main-content"];
+    const contactData = siteContent.contact;
+    const footerData = siteContent.footer;
+
+    //Nav
+    let myNav = document.querySelectorAll('a');
+    myNav[0].textContent = siteContent['nav']['nav-item-1'];
+    myNav[1].textContent = siteContent['nav']['nav-item-2'];
+    myNav[2].textContent = siteContent['nav']['nav-item-3'];
+    myNav[3].textContent = siteContent['nav']['nav-item-4'];
+    myNav[4].textContent = siteContent['nav']['nav-item-5'];
+    myNav[5].textContent = siteContent['nav']['nav-item-6'];
+    
+    //logo image
+    logoImg.setAttribute("src", navData["img-src"]);
+
+    //Text for h1 and button, and src for image in cta class
+    let theDomHeader = document.querySelector('h1');
+    theDomHeader.textContent = siteContent ['cta'] ['h1'];
+
+    let button = document.querySelector('button');
+    button.textContent = siteContent ['cta'] ['button'];
+
+    let logoPic = document.getElementById('cta-img');
+    logoPic.setAttribute('src', siteContent["cta"]["img-src"]);
+
+    //Main content
+    let sectionTitles = [];
+    sectionTitles.push(siteContent['main-content']['features-h4']);
+    sectionTitles.push(siteContent['main-content']['about-h4']);
+    sectionTitles.push(siteContent['main-content']['services-h4']);
+    sectionTitles.push(siteContent['main-content']['product-h4']);
+    sectionTitles.push(siteContent['main-content']['vision-h4']);
+
+    let mainContentH4s = document.querySelectorAll('.main-content .text-content h4');
+
+    sectionTitles.forEach((e, i) => mainContentH4s[i].textContent = e);
+
+    //Middle Image
+    let midImg = document.getElementById('middle-img');
+    midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+    //Text content - P
+    let theParagraph = [];
+    theParagraph.push(siteContent['main-content']['features-content']);
+    theParagraph.push(siteContent['main-content']['about-content']);
+    theParagraph.push(siteContent['main-content']['services-content']);
+    theParagraph.push(siteContent['main-content']['product-content']);
+    theParagraph.push(siteContent['main-content']['vision-content']);
+  
+    let mainContentP = document.querySelectorAll('.main-content .text-content p');
+  
+    theParagraph.forEach((e, i) => mainContentP[i].textContent = e);
+
+    //contact info
+    subheadings[5].innerText = contactData['contact-h4']
+    content[5].innerText = contactData['address']
+    content[6].innerText = contactData['phone']
+    content[7].innerText = contactData['email']
+
+    //footer
+    content[8].innerText = footerData['copyright']
+
+// Task 3: Add new content
+    //  Change the color of the navigation text to be green.
+    navItems.forEach(nav => nav.style.color = 'green')
+    //  Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
+    aPrint.setAttribute('href', '#')
+    aPrint.inerText = 'Print'
+    aPrint.style.color = 'green'
+    aEmployment.setAttribute('href', '#')
+    aEmployment.innerText = 'Employment'
+    aEmployment.style.color = 'green'
+
+    nav.prepend(aPrint)
+    nav.appendChild(aEmployment)
