@@ -83,6 +83,14 @@ const middleImg = document.querySelector('middle-img');
     //Middle Image
     middleImg.setAttribute("src", ctaData["img-src"])
 
+    //bottom content
+    subHeadings[2].innerText = mainData["services-h4"]
+    content[2].innerText = mainData["services-content"]
+    subheadings[3].innerText = mainData["product-h4"]
+    content[3].innerText = mainData['product-content']
+    subheadings[4].innerText = mainData['vision-h4']
+    content[4].innerText = mainData['vision-content']
+
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
     
