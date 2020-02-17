@@ -91,6 +91,15 @@ const middleImg = document.querySelector('middle-img');
     subheadings[4].innerText = mainData['vision-h4']
     content[4].innerText = mainData['vision-content']
 
+    //contact info
+    subheadings[5].innerText = contactData['contact-h4']
+    content[5].innerText = contactData['address']
+    content[6].innerText = contactData['phone']
+    content[7].innerText = contactData['email']
+
+    //footer
+    content[8].innerText = footerData['copyright']
+
 // Task 3: Add new content
     //  Change the color of the navigation text to be green.
     
